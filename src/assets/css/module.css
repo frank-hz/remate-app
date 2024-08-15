@@ -1,0 +1,234 @@
+.module {
+    
+}
+.module-header {
+    padding: .6rem 1.5rem;
+    border-bottom:1px solid var(--border);
+}
+.module-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    line-height: 1.15rem;
+    font-weight: 800;
+    color: var(--text_color);
+    margin-left: 4px;
+}
+.module-title svg {
+    margin-right: 2px;
+}
+.module-overview {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    margin-top: 6px;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+.module-overview::-webkit-scrollbar {
+    height: 6px;
+}
+.module-overview::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+.module-overview::-webkit-scrollbar-thumb {   
+    border-radius: 4px;
+}
+.card-info {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 4px;
+    padding: .4rem .6rem;
+    min-width: 200px;
+    width: 200px;
+}
+.card-info-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-info-value span {
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.card-info-value svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 2px;
+}
+.card-info-subtext {
+    padding: .4rem;
+    font-size: .9rem;
+    font-weight: 500;
+    text-align: center;
+}
+.module-table-filters {
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: 100%;
+    width: 100%;
+
+}
+/* .filter-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;  
+} */
+.filter {
+    /* margin: 0 3px 0 2px; */
+    margin: 3px;
+    width: auto;
+}
+.filter-right {
+    margin-right: auto;
+}
+.filter-large {
+    width: 400px;
+}
+.filter-label {
+    display: block;
+    font-size: .85rem;
+    font-weight: 600;
+    margin-bottom: 1px;
+}
+.input-group {
+    position: relative;
+    width: 100%;
+    height: 37px;
+    display: inline-flex;
+    align-items: center;    
+}
+
+.input-group select,
+.input-group input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: inline-block;
+    border-color: transparent;
+    color: var(--text_color);
+    outline: 0;
+    height: 100%;
+    width: 100%;
+    padding: .4rem .6rem;
+    padding-right: 24px;
+    border-radius: 4px;
+    font-size: .9rem;
+    line-height: 1rem;
+    border: 1px solid var(--border_control);
+    position: relative;
+    transition: all .2s ease;
+}
+.input-group input[type="date"]::-webkit-inner-spin-button,
+.input-group input[type="date"]::-webkit-calendar-picker-indicator {
+    -webkit-appearance: none;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    margin: 0 1px;
+    width: 20px;
+    height: 20px;
+
+}
+.input-group input::placeholder {
+    font-size: .9rem;
+    color: var(--gray);
+}
+.input-group select:focus,
+.input-group input:focus {
+    border-color: var(--primary);
+    box-shadow: rgba(10, 75, 255, 0.2) 0px 0px 0px 3px;    
+    /* box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px; */
+}
+.input-group .input-group-icon {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    height: 100%;
+    width: 26px;
+    pointer-events: none;
+}
+
+
+
+.module-table {
+    max-width: 100%;
+    width: 100%;
+    max-height: 70vh;
+    overflow: auto;
+}
+.module-table table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: .95rem;
+}
+.module-table table td,
+.module-table table th {
+    text-wrap: nowrap;
+}
+.module-table table th {
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text_color);
+    padding: .4rem .6rem;
+    text-align: left;
+    border: 1px solid var(--border);
+    border-top: transparent;
+}
+.module-table table td {
+    padding: .4rem .6rem;
+    text-align: left;
+    border: 1px solid var(--border);
+}
+.module-table table td:first-child,
+.module-table table th:first-child {
+    border-left: transparent;
+}
+.module-table table td:last-child,
+.module-table table th:last-child {
+    border-right: transparent;
+}
+.module-table table tr:last-child td {
+    /* border-bottom: transparent; */
+}
+.module-table table td.cell-index,
+.module-table table th.cell-index {
+    width: 8px;
+    font-size: .9rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 450px){
+    .module-header {
+        padding: 0;
+    }
+    .module-title {
+        padding: .6rem .8rem;
+    }
+    .card-info {
+        padding: .2rem .4rem;
+    }
+    .module-table-filters {
+        padding: .4rem .6rem;
+    }
+    .filter {
+        margin: 3px 1px;
+        width: 48%;
+        width: 100%;
+    }
+    .filter-large {
+        width: 100%;
+    }
+    /* .filter-right {
+        margin: 1px;
+    } */
+}
